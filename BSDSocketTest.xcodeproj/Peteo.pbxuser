@@ -1,0 +1,180 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* BSDSocketTest */ = {
+		activeExec = 0;
+		executables = (
+			21C893C014ADBA0F00D7C892 /* BSDSocketTest */,
+		);
+	};
+	21C893C014ADBA0F00D7C892 /* BSDSocketTest */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = BSDSocketTest;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	21C893D914ADBA1E00D7C892 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	21C893DA14ADBA1E00D7C892 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	21C893DE14ADBA7200D7C892 /* Socket.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {907, 483}}";
+			sepNavSelRange = "{227, 31}";
+			sepNavVisRange = "{34, 235}";
+		};
+	};
+	21C893DF14ADBA7200D7C892 /* Socket.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {907, 735}}";
+			sepNavSelRange = "{327, 0}";
+			sepNavVisRange = "{161, 262}";
+		};
+	};
+	21C893EB14ADBB7500D7C892 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF83631B13286EF300F3C033 /* HelloWorldScene.cpp */;
+		name = "HelloWorldScene.cpp: 9";
+		rLen = 0;
+		rLoc = 173;
+		rType = 0;
+		vrLen = 373;
+		vrLoc = 0;
+	};
+	21C893EC14ADBB7500D7C892 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF83631C13286EF300F3C033 /* HelloWorldScene.h */;
+		name = "HelloWorldScene.h: 9";
+		rLen = 557;
+		rLoc = 143;
+		rType = 0;
+		vrLen = 521;
+		vrLoc = 206;
+	};
+	21F9DD7B14AEE892009A4A32 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 21C893DE14ADBA7200D7C892 /* Socket.h */;
+		name = "Socket.h: 18";
+		rLen = 31;
+		rLoc = 227;
+		rType = 0;
+		vrLen = 235;
+		vrLoc = 34;
+	};
+	21F9DD7C14AEE892009A4A32 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 21C893DF14ADBA7200D7C892 /* Socket.cpp */;
+		name = "Socket.cpp: 21";
+		rLen = 0;
+		rLoc = 373;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 161;
+	};
+	21F9DD7D14AEE892009A4A32 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 21C893DF14ADBA7200D7C892 /* Socket.cpp */;
+		name = "Socket.cpp: 19";
+		rLen = 0;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 161;
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 21C893C014ADBA0F00D7C892 /* BSDSocketTest */;
+		activeSDKPreference = iphonesimulator4.3;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* BSDSocketTest */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* BSDSocketTest */,
+		);
+		codeSenseManager = 21C893DA14ADBA1E00D7C892 /* Code sense */;
+		executables = (
+			21C893C014ADBA0F00D7C892 /* BSDSocketTest */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					729,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 347007113;
+			PBXWorkspaceStateSaveDate = 347007113;
+		};
+		perUserProjectItems = {
+			21C893EB14ADBB7500D7C892 /* PBXTextBookmark */ = 21C893EB14ADBB7500D7C892 /* PBXTextBookmark */;
+			21C893EC14ADBB7500D7C892 /* PBXTextBookmark */ = 21C893EC14ADBB7500D7C892 /* PBXTextBookmark */;
+			21F9DD7B14AEE892009A4A32 /* PBXTextBookmark */ = 21F9DD7B14AEE892009A4A32 /* PBXTextBookmark */;
+			21F9DD7C14AEE892009A4A32 /* PBXTextBookmark */ = 21F9DD7C14AEE892009A4A32 /* PBXTextBookmark */;
+			21F9DD7D14AEE892009A4A32 /* PBXTextBookmark */ = 21F9DD7D14AEE892009A4A32 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 21C893D914ADBA1E00D7C892 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	506EE05D10304ED200A389B3 /* cocos2d libraries */ = {
+		activeExec = 0;
+	};
+	BF83631B13286EF300F3C033 /* HelloWorldScene.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {907, 2037}}";
+			sepNavSelRange = "{173, 0}";
+			sepNavVisRange = "{0, 373}";
+		};
+	};
+	BF83631C13286EF300F3C033 /* HelloWorldScene.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1225.73, 651}}";
+			sepNavSelRange = "{143, 557}";
+			sepNavVisRange = "{206, 521}";
+		};
+	};
+}
