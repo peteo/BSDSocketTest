@@ -208,6 +208,14 @@
 				RelativePath=".\Classes\HelloWorldScene.h"
 				>
 			</File>
+			<File
+				RelativePath=".\Classes\TestSocket.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Classes\TestSocket.h"
+				>
+			</File>
 			<Filter
 				Name="Sockets"
 				>

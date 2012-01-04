@@ -25,6 +25,8 @@ public:
 
 	// implement the "static node()" method manually
 	LAYER_NODE_FUNC(HelloWorld);
+
+	void gameLoop(cocos2d::ccTime dt);
 };
 
 #endif // __HELLOWORLD_SCENE_H__
