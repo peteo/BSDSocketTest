@@ -40,8 +40,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "SocketHandler.h"
 #include "UdpSocket.h"
-#include "ResolvSocket.h"
-#include "ResolvServer.h"
+//#include "ResolvSocket.h"
+//#include "ResolvServer.h"
 #include "TcpSocket.h"
 #include "IMutex.h"
 #include "Utility.h"
