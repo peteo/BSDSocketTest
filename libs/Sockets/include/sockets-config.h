@@ -52,6 +52,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #undef ENABLE_XML
 #endif // _RUN_DP
 
+#if (defined(TARGET_OS_IPHONE) || defined(TARGET_IPHONE_SIMULATOR))
+	#define MACOSX
+#endif
 
 /* OpenSSL support. */
 //#define HAVE_OPENSSL

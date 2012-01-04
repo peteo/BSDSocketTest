@@ -85,6 +85,7 @@ bool HelloWorld::init()
 	// add the sprite as a child to this layer
 	this->addChild(pSprite, 0);
 
+	printf("TestSocketTestSocketTestSocket\n");
 	
 	TestSocket ts(h);
 	ts.Open("210.51.22.209", 6001);

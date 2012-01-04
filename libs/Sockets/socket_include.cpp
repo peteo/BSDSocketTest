@@ -33,6 +33,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "socket_include.h"
 
 // only to be included in win32 projects
+#ifdef _WIN32
 const char *StrError(int x) 
 {
 static	char tmp[100];
@@ -88,6 +89,4 @@ static	char tmp[100];
 	snprintf(tmp, sizeof(tmp), "Winsock error code: %d", x);
 	return tmp;
 }
-
-
-
+#endif
