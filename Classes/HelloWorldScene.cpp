@@ -7,14 +7,8 @@
 //
 
 #include "TestSocket.h"
-#include "StdoutLog.h"
-#include "SocketHandler.h"
-
 
 #include "HelloWorldScene.h"
-
-StdoutLog glog;
-SocketHandler h(&glog);
 
 USING_NS_CC;
 
@@ -85,21 +79,21 @@ bool HelloWorld::init()
 	// add the sprite as a child to this layer
 	this->addChild(pSprite, 0);
 
-	printf("TestSocketTestSocketTestSocket\n");
-	
-	TestSocket ts(h);
-	ts.Open("210.51.22.209", 6001);
-	h.Add(&ts);
-	h.Select(0,0);
+	//TestSocket ts(h);
+	//ts.Open("210.51.22.209", 6001);
+	//h.Add(&ts);
+	//h.Select(0,0);
 
-	schedule(schedule_selector(HelloWorld::gameLoop),0);
+	//schedule(schedule_selector(HelloWorld::gameLoop),0);
+
+	TestThread * pTest = new TestThread();
 	
 	return true;
 }
 
 void HelloWorld::gameLoop(ccTime dt)
 {
-	h.Select(1,0);
+	//h.Select(1,0);
 }
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)

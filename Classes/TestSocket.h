@@ -3,7 +3,8 @@
 
 #include "TcpSocket.h"
 #include "SocketHandler.h"
-
+#include "Thread.h"
+#include "StdoutLog.h"
 
 class MyHandler : public SocketHandler
 {
@@ -22,7 +23,6 @@ public:
 			}
 			else
 #endif
-				
 			if (dynamic_cast<TcpSocket *>(p0))
 			{
 				p -> Send("TcpSocket\n");
@@ -57,7 +57,7 @@ private:
 class TestSocket : public TcpSocket
 {
 public:
-	TestSocket(ISocketHandler& h) : TcpSocket(h) 
+	TestSocket(ISocketHandler& h) : TcpSocket(h)
 	{
 		//SetLineProtocol();
 	}
@@ -72,11 +72,27 @@ public:
 		printf("TestSocket connected\n");
 	}
 
-	void OnConnectFailed() 
+	void OnConnectFailed()
 	{
 		printf("TestSocket::OnConnectFailed\n");
 		SetCloseAndDelete();
 	}
+};
+
+class TestThread : public Thread
+{
+public:
+	TestThread();
+
+	virtual ~TestThread();
+
+	void Run();
+
+private:
+	StdoutLog     * m_plog;
+	MyHandler     * m_Handler;
+	TestSocket    * m_pTS;
+
 };
 
 #endif
