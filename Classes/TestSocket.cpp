@@ -30,3 +30,12 @@ void TestThread::Run()
 		m_Handler->Select(1,0);
 	}
 }
+
+void TestThread::send(const std::string &str)
+{
+	m_pTS->Send(str);
+}
+
+
+
+

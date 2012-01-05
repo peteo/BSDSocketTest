@@ -87,6 +87,8 @@ public:
 	virtual ~TestThread();
 
 	void Run();
+	
+	void send(const std::string &str);
 
 private:
 	StdoutLog     * m_plog;

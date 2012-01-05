@@ -10,8 +10,6 @@
 
 #include "HelloWorldScene.h"
 
-USING_NS_CC;
-
 CCScene* HelloWorld::scene()
 {
 	// 'scene' is an autorelease object
@@ -79,24 +77,22 @@ bool HelloWorld::init()
 	// add the sprite as a child to this layer
 	this->addChild(pSprite, 0);
 
-	//TestSocket ts(h);
-	//ts.Open("210.51.22.209", 6001);
-	//h.Add(&ts);
-	//h.Select(0,0);
-
 	//schedule(schedule_selector(HelloWorld::gameLoop),0);
 
-	TestThread * pTest = new TestThread();
+	m_pTest = new TestThread();
 	
 	return true;
 }
 
 void HelloWorld::gameLoop(ccTime dt)
 {
-	//h.Select(1,0);
+	
 }
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)
 {
-	CCDirector::sharedDirector()->end();
+	//CCDirector::sharedDirector()->end();
+	
+	//test send
+	m_pTest->send("root\r\n");
 }
