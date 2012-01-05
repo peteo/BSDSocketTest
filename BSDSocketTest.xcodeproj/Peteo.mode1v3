@@ -252,7 +252,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>175</real>
+								<real>230</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -274,15 +274,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>33</integer>
-									<integer>29</integer>
-									<integer>5</integer>
-									<integer>3</integer>
+									<integer>39</integer>
+									<integer>37</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 145}, {175, 615}}</string>
+							<string>{{0, 422}, {230, 615}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -294,11 +292,11 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {192, 633}}</string>
+						<string>{{0, 0}, {247, 633}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>175</real>
+							<real>230</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>0 104 1280 674 0 0 1280 778 </string>
@@ -306,7 +304,7 @@
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>192pt</string>
+					<string>247pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -319,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CCTextureCache.cpp</string>
+								<string>TestSocket.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CCTextureCache.cpp</string>
+										<string>TestSocket.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>218714F614B58EF80056DAA5</string>
+										<string>21D482E814B5C3AD005EFFA9</string>
 										<key>history</key>
 										<array>
 											<string>21BF688D14B49224001E6452</string>
@@ -357,7 +355,6 @@
 											<string>21FEDBA714B5523A00A09F07</string>
 											<string>21FEDBB914B5536B00A09F07</string>
 											<string>218714DB14B5835D0056DAA5</string>
-											<string>218714DC14B5835D0056DAA5</string>
 											<string>218714DD14B5835D0056DAA5</string>
 											<string>218714E314B583970056DAA5</string>
 											<string>218714E414B583970056DAA5</string>
@@ -367,7 +364,8 @@
 											<string>218714F114B585FE0056DAA5</string>
 											<string>218714F214B585FE0056DAA5</string>
 											<string>218714F314B585FE0056DAA5</string>
-											<string>218714E814B585AA0056DAA5</string>
+											<string>21D482E214B5C3AD005EFFA9</string>
+											<string>21D482E314B5C3AD005EFFA9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -379,14 +377,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1083, 537}}</string>
+								<string>{{0, 0}, {1028, 534}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 104 1280 674 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>537pt</string>
+							<string>534pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -399,18 +397,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 542}, {1083, 91}}</string>
+								<string>{{0, 539}, {1028, 94}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 104 1280 674 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>91pt</string>
+							<string>94pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>1083pt</string>
+					<string>1028pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -425,9 +423,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>218714A214B5801A0056DAA5</string>
+				<string>21D482E514B5C3AD005EFFA9</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>218714A314B5801A0056DAA5</string>
+				<string>21D482E614B5C3AD005EFFA9</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -565,12 +563,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>218714E014B5835D0056DAA5</string>
-		<string>218714D914B582B80056DAA5</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>21C893D714ADBA1E00D7C892</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/Peteo/git/BSDSocketTest/BSDSocketTest.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -651,7 +644,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>21C893D714ADBA1E00D7C892</string>
-				<string>218714A414B5801A0056DAA5</string>
+				<string>21D482E714B5C3AD005EFFA9</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
