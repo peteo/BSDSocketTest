@@ -56,6 +56,10 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 	#define MACOSX
 #endif
 
+#if defined(ANDROID)
+	#define MACOSX
+#endif
+
 /* OpenSSL support. */
 //#define HAVE_OPENSSL
 
