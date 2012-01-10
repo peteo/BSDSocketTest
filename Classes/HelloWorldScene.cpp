@@ -6,7 +6,7 @@
 //  Copyright __MyCompanyName__ 2011. All rights reserved.
 //
 
-#include "TestSocket.h"
+//#include "TestSocket.h"
 
 #include "HelloWorldScene.h"
 
@@ -79,7 +79,7 @@ bool HelloWorld::init()
 
 	//schedule(schedule_selector(HelloWorld::gameLoop),0);
 
-	m_pTest = new TestThread();
+	//m_pTest = new TestThread();
 	
 	return true;
 }
@@ -94,5 +94,5 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
 	//CCDirector::sharedDirector()->end();
 	
 	//test send
-	m_pTest->send("root\r\n");
+	//m_pTest->send("root\r\n");
 }
