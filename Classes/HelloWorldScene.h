@@ -11,15 +11,19 @@
 
 #include "cocos2d.h"
 
+//#include "TestSocket.h"
+
+#include "NetManager.h"
+
 USING_NS_CC;
 
-class TestThread;
+//class TestThread;
 
-class HelloWorld : public CCLayer
+class HelloWorld : public CCLayer ,public SocketReceiveProtocol
 {
 public:
 	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
-	virtual bool init();  
+	virtual bool init();
 
 	// there's no 'id' in cpp, so we recommand to return the exactly class pointer
 	static CCScene* scene();
@@ -32,7 +36,13 @@ public:
 
 	void gameLoop(ccTime dt);
 	
-	TestThread * m_pTest;
+	//TestThread * m_pTest;
+	
+	NetManager * m_pNetManager;
+	
+public:
+	void OnReceiveData(const char *buf,size_t len);
+	
 };
 
 #endif // __HELLOWORLD_SCENE_H__

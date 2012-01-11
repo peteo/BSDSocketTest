@@ -31,6 +31,7 @@
 		21BF685C14B48CA0001E6452 /* Debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21BF684514B48CA0001E6452 /* Debug.cpp */; };
 		21BF685D14B48CA0001E6452 /* Parse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21BF684614B48CA0001E6452 /* Parse.cpp */; };
 		21BF685E14B48CA0001E6452 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21BF684714B48CA0001E6452 /* Utility.cpp */; };
+		21D5D2E214BD295A008838D8 /* NetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21D5D2E114BD295A008838D8 /* NetManager.cpp */; };
 		505574581045D68500A31725 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EDBA4102F4C9F00A389B3 /* AVFoundation.framework */; };
 		505574591045D68500A31725 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */; };
 		5055745A1045D68500A31725 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */; };
@@ -381,6 +382,8 @@
 		21BF684514B48CA0001E6452 /* Debug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debug.cpp; sourceTree = "<group>"; };
 		21BF684614B48CA0001E6452 /* Parse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parse.cpp; sourceTree = "<group>"; };
 		21BF684714B48CA0001E6452 /* Utility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
+		21D5D2E014BD295A008838D8 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		21D5D2E114BD295A008838D8 /* NetManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetManager.cpp; sourceTree = "<group>"; };
 		506EDB87102F4C4000A389B3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		506EDBA4102F4C9F00A389B3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		506EE05E10304ED200A389B3 /* libcocos2d libraries.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libcocos2d libraries.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -867,6 +870,8 @@
 				D4D9411213EADBA700555460 /* AppDelegate.h */,
 				BF83631B13286EF300F3C033 /* HelloWorldScene.cpp */,
 				BF83631C13286EF300F3C033 /* HelloWorldScene.h */,
+				21D5D2E114BD295A008838D8 /* NetManager.cpp */,
+				21D5D2E014BD295A008838D8 /* NetManager.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1634,6 +1639,7 @@
 				21BF685C14B48CA0001E6452 /* Debug.cpp in Sources */,
 				21BF685D14B48CA0001E6452 /* Parse.cpp in Sources */,
 				21BF685E14B48CA0001E6452 /* Utility.cpp in Sources */,
+				21D5D2E214BD295A008838D8 /* NetManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1780,6 +1786,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					USE_FILE32API,
 					TARGET_OS_IPHONE,
+					DEBUG,
+					"COCOS2D_DEBUG=1",
+					"CD_DEBUG=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;

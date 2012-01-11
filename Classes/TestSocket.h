@@ -1,55 +1,57 @@
 #ifndef __TEST_SOCKETS_H__
 #define __TEST_SOCKETS_H__
 
+#include <queue>
+
 #include "TcpSocket.h"
 #include "SocketHandler.h"
 #include "Thread.h"
 #include "StdoutLog.h"
 
+typedef struct _AsyncStruct
+{
+	std::string			filename;
+} AsyncStruct;
+
+typedef struct _ImageInfo
+{
+	AsyncStruct *asyncStruct;
+} ImageInfo;
+
+class SocketProtocol
+{
+public:
+	virtual void OnReceiveData(const char *buf,size_t len)
+	{
+		
+	}
+};
+
 class MyHandler : public SocketHandler
 {
 public:
-	MyHandler(StdLog *p) : SocketHandler(p),m_done(false),m_quit(false) {}
-	~MyHandler() {}
-
-	void List(TcpSocket *p) {
-		for (socket_m::iterator it = m_sockets.begin(); it != m_sockets.end(); it++)
-		{
-			Socket *p0 = (*it).second;
-#ifdef ENABLE_POOL
-			if (dynamic_cast<ISocketHandler::PoolSocket *>(p0))
-			{
-				p -> Send("PoolSocket\n");
-			}
-			else
-#endif
-			if (dynamic_cast<TcpSocket *>(p0))
-			{
-				p -> Send("TcpSocket\n");
-			}
-			else
-			{
-				p -> Send("Some kind of Socket\n");
-			}
-		}
+	MyHandler(StdLog * pLog)
+	:SocketHandler(pLog)
+	,m_quit(false)
+	{
+		
 	}
-	void SetQuit() { m_quit = true; }
-	bool Quit() { return m_quit; }
-	void CheckHtml() {
-		if (m_done)
-		{
-			if (m_ok)
-				printf("Html OK:\n%s\n", m_html.c_str());
-			else
-				printf("Html Failed\n");
-			m_done = false;
-		}
+	
+	virtual ~MyHandler() 
+	{
+		
 	}
-
-	std::string m_html;
-	bool m_ok;
-	bool m_done;
-
+	
+	void SetQuit()
+	{ 
+		m_quit = true;
+	}
+	
+	bool Quit()
+	{ 
+		return m_quit;
+	}
+	
 private:
 	bool m_quit;
 };
@@ -57,43 +59,50 @@ private:
 class TestSocket : public TcpSocket
 {
 public:
-	TestSocket(ISocketHandler& h) : TcpSocket(h)
+	TestSocket(ISocketHandler& pHandler)
+	:TcpSocket(pHandler)
+	,m_pTarget(NULL)
 	{
 		//SetLineProtocol();
 	}
 
-	void OnRawData(const char *buf,size_t len)
-	{
-		printf("OnRawData:%s\n",buf);
-	}
+	void OnRawData(const char *buf,size_t len);
 
-	void OnConnect()
-	{
-		printf("TestSocket connected\n");
-	}
+	void OnConnect();
 
-	void OnConnectFailed()
-	{
-		printf("TestSocket::OnConnectFailed\n");
-		SetCloseAndDelete();
-	}
+	void OnConnectFailed();
+	
+public:
+	
+	SocketProtocol * m_pTarget;
+	
 };
 
-class TestThread : public Thread
+
+
+//////////////////////////////////////////
+
+
+class TestThread : public Thread , public SocketProtocol
 {
 public:
-	TestThread();
+	TestThread(SocketProtocol * pTarget);
 
 	virtual ~TestThread();
 
 	void Run();
 	
 	void send(const std::string &str);
+	
+	void OnReceiveData(const char *buf,size_t len);
 
 private:
 	StdoutLog     * m_plog;
 	MyHandler     * m_Handler;
 	TestSocket    * m_pTS;
+	
+	std::queue<AsyncStruct*>		*s_pAsyncStructQueue;
+	std::queue<ImageInfo*>			*s_pImageQueue;
 
 };
 

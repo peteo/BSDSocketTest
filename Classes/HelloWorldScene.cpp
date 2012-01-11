@@ -6,7 +6,7 @@
 //  Copyright __MyCompanyName__ 2011. All rights reserved.
 //
 
-#include "TestSocket.h"
+//#include "TestSocket.h"
 
 #include "HelloWorldScene.h"
 
@@ -57,29 +57,24 @@ bool HelloWorld::init()
 
 	// add a label shows "Hello World"
 	// create and initialize a label
-	CCLabelTTF* pLabel = CCLabelTTF::labelWithString("Hello World", "Thonburi", 34);
-
-	// ask director the window size
+	CCLabelTTF* pLabel = CCLabelTTF::labelWithString("Hello World", "Thonburi", 20);
+	pLabel->setTag(100);
 	CCSize size = CCDirector::sharedDirector()->getWinSize();
-
-	// position the label on the center of the screen
-	pLabel->setPosition( ccp(size.width / 2, size.height - 20) );
-
-	// add the label as a child to this layer
-	this->addChild(pLabel, 1);
+	pLabel->setPosition( ccp(size.width / 2, size.height / 2) );
+	this->addChild(pLabel);
 
 	// add "HelloWorld" splash screen"
-	CCSprite* pSprite = CCSprite::spriteWithFile("HelloWorld.png");
-
-	// position the sprite on the center of the screen
-	pSprite->setPosition( ccp(size.width/2, size.height/2) );
-
-	// add the sprite as a child to this layer
-	this->addChild(pSprite, 0);
+	//CCSprite* pSprite = CCSprite::spriteWithFile("HelloWorld.png");
+	//pSprite->setPosition( ccp(size.width/2, size.height/2) );
+	//this->addChild(pSprite, 0);
 
 	//schedule(schedule_selector(HelloWorld::gameLoop),0);
 
-	m_pTest = new TestThread();
+	//m_pTest = new TestThread(this);
+	
+	m_pNetManager = new NetManager();
+	m_pNetManager->m_pTarget = this;
+	m_pNetManager->init();
 	
 	return true;
 }
@@ -94,5 +89,22 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
 	//CCDirector::sharedDirector()->end();
 	
 	//test send
-	m_pTest->send("root\r\n");
+	m_pNetManager->addRequest("root\r\n",NULL,NULL);
+	m_pNetManager->addRequest("root\r\n",NULL,NULL);
+	m_pNetManager->addRequest("help\r\n",NULL,NULL);
 }
+
+
+void HelloWorld::OnReceiveData(const char *buf,size_t len)
+{
+	CCLOG("HelloWorld::OnRawData:%s\n",buf);
+	
+	CCLabelTTF* pLabel = (CCLabelTTF*)getChildByTag(100);
+	if(pLabel)
+	{
+		pLabel->setString(buf);
+	}
+}
+ 
+ 
+
