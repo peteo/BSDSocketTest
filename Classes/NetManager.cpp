@@ -130,7 +130,6 @@ void NetManager::NetTick(ccTime dt)
 	
 	std::queue<AsyncRequest*> *pQueue = s_pAsyncRequestQueue;
 	
-	// get async struct from queue
 	pthread_mutex_lock(&s_AsyncRequestQueueMutex);
 	if (pQueue->empty())
 	{
@@ -149,10 +148,7 @@ void NetManager::NetTick(ccTime dt)
 		CC_SAFE_DELETE(pAsyncRequest);
 	}
 	
-	
-	
 	//处理接收的请求
-	// the image is generated in loading thread
 	std::queue<RawDataInfo*> *RawDataQueue = s_pRawDataQueue;
 	
 	pthread_mutex_lock(&s_RawDataQueueMutex);
